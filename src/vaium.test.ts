@@ -48,4 +48,13 @@ describe('funcionalidade soma', () => {
         expect (resultado).toBe(4);
     })
 
+    test('vai um, com 2 casas decimais composto', () => {
+        //setup
+        const sut = new Vaium();
+        //action
+        const resultado = sut.vaiumDuploComposto('16+83');
+        //expectation
+        expect (resultado).toBe(1);
+    })
+
 })
