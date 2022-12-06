@@ -52,9 +52,27 @@ describe('funcionalidade soma', () => {
         //setup
         const sut = new Vaium();
         //action
-        const resultado = sut.vaiumDuploComposto('16+83');
+        const resultado = sut.vaiumDuploComposto('16+84');
         //expectation
-        expect (resultado).toBe(1);
+        expect (resultado).toBe(2);
+    })
+
+    test('vai um, com n casas decimais nos 2 termos', () => {
+        //setup
+        const sut = new Vaium();
+        //action
+        const resultado = sut.vaiumSemiFinal('157+943');
+        //expectation
+        expect (resultado).toBe(3);
+    })
+
+    test('vai um, com n e m casas decimais', () => {
+        //setup
+        const sut = new Vaium();
+        //action
+        const resultado = sut.vaiumFinal('99999+1');
+        //expectation
+        expect (resultado).toBe(5);
     })
 
 })
